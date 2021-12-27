@@ -1,0 +1,25 @@
+from django.urls import path
+from.import views
+urlpatterns = [
+    path('', views.apioverview, name="overview"),
+    path('task-list/', views.taskList, name='task-list'),
+    path('task-detail/<str:pk>/', views.taskDetail, name='task-detail'),
+    path('task-create/', views.taskCreate, name='task-create'),
+    path('task-update/<str:pk>/', views.taskUpdate, name='task-update'),
+    path('task-delete/<str:pk>/', views.taskDelete, name='task-delete'),
+    path('assign-detail/', views.assignDetail, name='assign-detail'),
+    path('category-detail/', views.nestedcategory, name='category-detail'),
+    path('favourite/', views.favourite, name='favourite'),
+    path('create/', views.createorder, name='create'),
+    path('getorder/', views.getorder, name='getorder'),
+    path('customer/', views.customerview, name='customer'),
+    path('customorder/', views.customerorder, name='customorder'),
+    path('productrating/', views.rating, name='productrating'),
+    path('rating/', views.RatingView.as_view(), name='rating'),
+    path('productratingfun/', views.ratingviewfun, name='productratingfun'),
+    path('post/', views.postview, name='post'),
+    path('createpost/', views.create_post, name='createpost'),
+    path('createassignment/', views.create_assignment, name='createassignment'),
+    path('createtask/', views.create_task, name='createtask'),
+    path('thumbnail/', views.thumbnailview, name='thumbnail'),
+]
